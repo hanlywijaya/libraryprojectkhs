@@ -1,5 +1,3 @@
-# libraryprojectkhs
-
 # What is libraryprojectkhs?
 An assignment for 11SEN1 that is targeted for library use.
 
