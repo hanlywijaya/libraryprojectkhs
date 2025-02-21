@@ -25,19 +25,19 @@ fullnames = {
     'mmansour': 'Mathew Mansour',
 }
 
+print("..........................")
+print("......[]..........[]......")
+print("......[]..........[]......")
+print("......[]..........[]......")
+print("......[]..........[]......")
+print("..........................")
+print("....\\..............//....")
+print(".....\\............//.....")
+print("......\\__________//......")
+print(".......\.________./.......")
+print("..........................")
+print("..........................")
 print("Welcome to Kingsgrove High School's library services.")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
-print(".")
 
 ## login
 def login():

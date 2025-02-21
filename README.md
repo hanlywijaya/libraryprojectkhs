@@ -1,11 +1,14 @@
 # What is libraryprojectkhs?
 - **An all in one tool to view & borrow the library books of Kingsgrove High School**
 - Supported on **Windows, macOS and Linux**
+
 # Prerequisites
 - **Python**
 - **Terminal/Command Prompt**
+
 # Compatibility
 Python - can be used in Windows' command prompt, macOS/OS X/Mac OS X's Terminal and Linux's terminal.
+
 # References for code
 YouTube -
 https://www.youtube.com/shorts/_Q-PxvKfv8Y
