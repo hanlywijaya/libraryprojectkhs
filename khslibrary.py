@@ -41,7 +41,5 @@ print(".")
 
 ## login
 def login():
-    attempts=3
-    while attempts > 0:
         username = input("Please enter your username: ")
         password = input("Please enter your password: ")
