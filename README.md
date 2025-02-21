@@ -2,7 +2,7 @@
 An assignment for 11SEN1 that is targeted for library use.
 
 # Compatibility
-Python 3.
+Python - can be used in Windows' command prompt, macOS/OS X/Mac OS X's Terminal and Linux's terminal.
 
 # References for code
 YouTube -
