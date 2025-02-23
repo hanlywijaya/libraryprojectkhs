@@ -7,12 +7,14 @@
 - **Terminal/Command Prompt**
 
 # Compatibility
-Python - can be used in Windows' command prompt, macOS/OS X/Mac OS X's Terminal and Linux's terminal.
+**Python** - **can be used** in **Windows' command prompt**, **macOS/OS X/Mac OS X's Terminal** and **Linux's terminal or command prompt.**
 
 # References for code
 YouTube -
 https://www.youtube.com/shorts/_Q-PxvKfv8Y
 https://www.youtube.com/watch?v=evNOzLfdo6U
+https://www.youtube.com/watch?v=KAXvMbD1Zac
+https://www.youtube.com/watch?v=-MZiQaNI0QA
 
 EduBirdie -
 https://edubirdie.com/docs/university-of-regina/cs-100-introduction-to-computers/45840-user-authentication-program-using-python-dictionary
@@ -35,3 +37,15 @@ https://www.programiz.com/python-programming/break-continue
 
 GitHub - LukeZGD - for inspiration and coding help
 https://github.com/LukeZGD/Legacy-iOS-Kit
+
+Reddit -
+https://www.reddit.com/r/learnpython/comments/hsvw5w/if_vs_elif/
+
+w3resource -
+https://www.w3resource.com/python-exercises/tkinter/python-tkinter-dialogs-and-file-handling-exercise-2.php#:~:text=Python%20Tkinter%3A%20Creating%20an%20exit%20confirmation%20dialog&text=from%20tkinter%20import%20messagebox%20%E2%80%93%20Import,to%20save%20changes%20before%20exiting.
+
+stackabuse -
+https://stackabuse.com/bytes/handling-yes-no-user-input-in-python/
+
+# DISCLAIMER :
+This is not official software to use in a deployed environment. This was made as a assessment task for my Software Engineering and people are highly encouraged to avoid using this for deployment.
