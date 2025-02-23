@@ -1,4 +1,5 @@
-# What is libraryprojectkhs?
+![KHS Library Services](khslibraryservices_icon.png)
+
 - **An all in one tool to view & borrow the library books of Kingsgrove High School**
 - Supported on **Windows, macOS and Linux**
 
