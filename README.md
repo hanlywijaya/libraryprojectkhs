@@ -56,15 +56,15 @@ python wiki -
 https://wiki.python.org/moin/ForLoop
 
 # GUI PROPOSAL (MOCKUP)
-![KHS Login](khslibrarylogin.png)
+![KHS Login](khslibrarylogin.jpg)
 Library Login
-![KHS Functions](khslibraryfunctionmenu.png)
+![KHS Functions](khslibraryfunctionmenu.jpg)
 KHS Function Menu
-![KHS List of Books](khslibrarylistofbooks.png)
+![KHS List of Books](khslibrarylistofbooks.jpg)
 KHS List of Books
-![KHS Borrow Menu](khslibraryborrowbook.png)
+![KHS Borrow Menu](khslibraryborrowbook.jpg)
 KHS Borrow Menu
-![KHS Exit](khslibraryexit.png)
+![KHS Exit](khslibraryexit.jpg)
 KHS Exit Menu
 # DISCLAIMER :
 This is not official software to use in a deployed environment. This is a assessment task for my Software Engineering and those looking are highly encouraged to avoid using this for deployment.
