@@ -44,9 +44,16 @@ https://www.reddit.com/r/learnpython/comments/hsvw5w/if_vs_elif/
 
 w3resource -
 https://www.w3resource.com/python-exercises/tkinter/python-tkinter-dialogs-and-file-handling-exercise-2.php#:~:text=Python%20Tkinter%3A%20Creating%20an%20exit%20confirmation%20dialog&text=from%20tkinter%20import%20messagebox%20%E2%80%93%20Import,to%20save%20changes%20before%20exiting.
+https://www.w3schools.com/python/python_arrays.asp
 
 stackabuse -
 https://stackabuse.com/bytes/handling-yes-no-user-input-in-python/
 
+mimo -
+https://mimo.org/glossary/python/time-sleep
+
+python wiki -
+https://wiki.python.org/moin/ForLoop
+
 # DISCLAIMER :
-This is not official software to use in a deployed environment. This was made as a assessment task for my Software Engineering and people are highly encouraged to avoid using this for deployment.
+This is not official software to use in a deployed environment. This is a assessment task for my Software Engineering and those looking are highly encouraged to avoid using this for deployment.

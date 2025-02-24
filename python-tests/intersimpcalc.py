@@ -1,5 +1,5 @@
-number1 = int(input("Enter number 1: "))
-number2 = int(input("Enter number 2: "))
+number1 = int(input("Enter 1st number: "))
+number2 = int(input("Enter 2nd number: "))
 
 print("Enter 1 for - operation")
 print("Enter 2 for + operation")
@@ -19,4 +19,4 @@ elif operation == "3":
 elif operation == "4":
     print("The answer is", number1 * number2)
 else:
-    print("Invalid operation")
+    print("Invalid input")
