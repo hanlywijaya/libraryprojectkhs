@@ -68,3 +68,5 @@ https://wiki.python.org/moin/ForLoop
 **KHS Exit Menu**
 # DISCLAIMER :
 This is not official software to use in a deployed environment. This is a assessment task for my Software Engineering and those looking are highly encouraged to avoid using this for deployment.
+# Documentation
+Documentation will be added in final revision of this repository.
