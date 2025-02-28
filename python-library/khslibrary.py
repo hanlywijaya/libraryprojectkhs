@@ -8,7 +8,7 @@ users = {
     'gwang': 'Pass4',
     'mkassar': 'Pass5',
     'adib': 'Pass6',
-    'bwiseman2': 'Pass7',
+    'bwiseman': 'Pass7',
     'kjohnson': 'Pass8',
     'fjose': 'Pass9',
     'mmansour': 'Pass10',
@@ -21,7 +21,7 @@ fullnames = {
     'gwang': 'Qing Wang',
     'mkassar': 'Maryam Kassar',
     'adib': 'Ali Dib',
-    'bwiseman2': 'Benji Wiseman',
+    'bwiseman': 'Benji Wiseman',
     'kjohnson': 'Khadija Johnson',
     'fjose': 'Fiona Jose',
     'mmansour': 'Mathew Mansour',
@@ -117,10 +117,10 @@ unavailable_books = {code: info for code, info in books.items() if info[1] == 'f
 while True:
     print("\nWelcome to Kingsgrove High School's Library, {}!".format(fullnames[username]))
     print("Please choose a service from the menu below:")
-    print("1. List all books")
-    print("2. List all available books")
-    print("3. Borrow a book")
-    print("4. Exit")
+    print("1. List all books in the library")
+    print("2. List all available books in the library")
+    print("3. Borrow a book from the library")
+    print("4. Exit the library")
     for _ in range(5):
         print(".")
     operation = input("Enter the number corresponding to your choice: ")
