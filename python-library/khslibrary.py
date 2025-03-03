@@ -84,7 +84,7 @@ def login():
         attempts -= 1
         print("Incorrect username or password. Please try again. You have {} attempts left.".format(attempts))
     if attempts == 0:
-        print("Too many failed login attempts. Please rerun the program and try again.")
+        print("Too many failed login attempts. Please rerun program and try again.")
         return
 
 # Keep username to obtain full name
@@ -110,7 +110,6 @@ books = {
     "1115": ("The Divine Comedy", "f")
 }
 
-# Separate books into available and unavailable
 available_books = {code: info for code, info in books.items() if info[1] == 't'}
 unavailable_books = {code: info for code, info in books.items() if info[1] == 'f'}
 
@@ -120,7 +119,8 @@ while True:
     print("1. List all books in the library")
     print("2. List all available books in the library")
     print("3. Borrow a book from the library")
-    print("4. Exit the library")
+    print("4. Return a book to the library")
+    print("5. Exit the library")
     for _ in range(5):
         print(".")
     operation = input("Enter the number corresponding to your choice: ")
@@ -131,7 +131,6 @@ while True:
         print(".")
         print(".")
         print("**LIST OF ALL BOOKS**")
-        # Display all books without their availability status.
         for idx, (book_code, book_info) in enumerate(books.items(), start=1):
             title = book_info[0]
             print(f"{idx}. {title} (Book Code: {book_code})")
@@ -168,8 +167,6 @@ while True:
                 confirm = input()
                 if confirm.lower() == "y":
                     print("Successful request. Your request will be processed within 1-3 school days and you will be notified via your @education.nsw.gov.au email regarding your request.")
-                    # Move the book from available_books to unavailable_books.
-                    unavailable_books[bookofchoice] = available_books.pop(bookofchoice)
                 else:
                     print("Borrow cancelled.")
             else:
@@ -180,9 +177,34 @@ while True:
         time.sleep(5)
 
     elif operation == "4":
+        print("Opening available books to return...\n")
+        print("**LIST OF AVAILABLE BOOKS TO RETURN**")
+        if not available_books:
+            print("No books are currently available for returning.")
+        else:
+            for idx, (book_code, book_info) in enumerate(unavailable_books.items(), start=1):
+                print(f"{idx}. {book_info[0]} (Book Code: {book_code})")
+            print(f"\nThere are a total of {len(unavailable_books)} books available to return.")
+            bookofchoice = input("\nPlease enter the book code of the book you wish to return: ")
+            if bookofchoice in unavailable_books:
+                print("Book found!")
+                print("Confirm return {} - {}? (y/n)".format(bookofchoice, unavailable_books[bookofchoice][0]))
+                confirm = input()
+                if confirm.lower() == "y":
+                    print("Successful request. Your request will be processed within 1-3 school days and you will be notified via your @education.nsw.gov.au email regarding your request.")
+                else:
+                    print("Borrow cancelled.")
+            else:
+                if bookofchoice in unavailable_books:
+                    print("Sorry, the book is currently not available.")
+                else:
+                    print("The book code does not exist. Please check the code and try again.")
+        time.sleep(5)
+
+    elif operation == "5":
         confirm_exit = input("Are you sure you want to exit? (y/n): ")
         if confirm_exit.lower() == "y":
-            print("Thank you for using Kingsgrove High School's library services, {}!".format(username))
+            print("Thank you for using Kingsgrove High School's library services, {}!".format(fullnames[username]))
             print("Developed by Hanly Wijaya, 2025")
             print("All rights reserved, 2025 HANLY WIJAYA ©")
             print("\n" * 2)
