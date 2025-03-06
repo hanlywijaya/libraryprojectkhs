@@ -157,6 +157,5 @@ while True:
         break
     else:
         continue
-    
 else:
     print("Invalid function number. Please try again.")
