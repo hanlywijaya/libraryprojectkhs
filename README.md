@@ -73,6 +73,6 @@ https://wiki.python.org/moin/ForLoop
 3. Enter "1" to list all books, "2" to list available books, "3" to borrow a book, "4" to return a book, or "5" to exit.
 4. Follow the prompts to perform the selected operation.
 # DISCLAIMER :
-This is not official software to use in a deployed environment. This is a assessment task for my Software Engineering and those looking are highly encouraged to avoid using this for deployment.
+This is not official software to use in a deployed environment. This is a assessment task for my Software Engineering and those looking are highly encouraged to avoid using this for deployment. Data such as names and passwords are not securely held, allowing attackers to easily compromise and steal.
 # Documentation
 Documentation will be added in final revision of this repository.

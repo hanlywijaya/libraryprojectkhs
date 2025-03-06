@@ -1,5 +1,7 @@
+## 'import time' IS USED TO COUNT SECONDS FOR 'time.sleep()' FUNCTIONS
 import time
 
+## USER DATA FOR USERNAMES, PASSWORDS AND FULL NAMES.
 userdata = {
     'sgilmore' : 'Pass1',
     'bwiseman' : 'Pass2',
@@ -26,6 +28,7 @@ namedata = {
     'mmansour' : 'Mathew Mansour',
 }
 
+## BOOK DATA FOR BOOK CODES, BOOK TITLES AND AVAILABILITY.
 bookdata = {
         '1101' : 'In Search of Lost Time',
         '1102' : 'Ulysses',
@@ -33,7 +36,7 @@ bookdata = {
         '1104' : 'The Great Gatsby',
         '1105' : 'Moby Dick',
         '1106' : 'One Hundred Years of Solitude',
-        '1107' : 'War and Piece',
+        '1107' : 'War and Peace',
         '1108' : 'Hamlet',
         '1109' : 'Lolita',
         '1110' : 'The Odyssey',
@@ -62,6 +65,7 @@ bookavailability = {
         '1115' : 'F',
 }
 
+## LOGIN MENU WITH ATTEMPT SYSTEM
 print("Welcome to Kingsgrove High School's library system")
 attempts = 3
 while attempts > 0:
@@ -80,9 +84,10 @@ while attempts > 0:
             print("You have run out of attempts. Please try again by rerunning the program.")
             exit()
 
+## FUNCTIONS MENU
 while True:
     print("\n"*15)
-    print("Welcome to Kingsgrove High School's library system", namedata[Username])
+    print("Welcome to Kingsgrove High School's library system,", namedata[Username])
     print("1 - List all books")
     print("2 - List of available books")
     print("3 - Borrow a book")
@@ -115,9 +120,20 @@ while True:
             if bookavailability[bcode] == "T":
                 print(index,".", book, "-", bcode)
                 index +=1
+                print("Resting for 5 seconds to let you read...")
+                time.sleep(5)
         borrowinput = input("Please input the book code you would like to borrow: ")
         if borrowinput in bookdata and bookavailability[borrowinput] == "T":
-            print("You have requested for", "'",bookdata[borrowinput],"' to be borrowed.")
+            print("You have requested for", "'",bookdata[borrowinput],"' to be borrowed. Is this correct?")
+            print("\n")
+            borrowconfirmation = input("Confirm request (y/n): ")
+            if borrowconfirmation == "y":
+                print("Request successfully sent. Please check your NSW EDU email for more details.")
+            if borrowconfirmation == "n":
+                print("Request halted.")
+            else:
+                print("Returning to the main menu.")
+                time.sleep(2)
         else:
             print("Unavailable book or invalid book code. Please try again later.")
     
@@ -128,34 +144,46 @@ while True:
             if bookavailability[bcode] == "F":
                 print(index,".", book, "-", bcode)
                 index +=1
-        borrowinput = input("Please input the book code you would like to return: ")
-        if borrowinput in bookdata and bookavailability[borrowinput] == "F":
-            print("You have requested for", "'",bookdata[borrowinput],"' to be returned.")
+                print("Resting for 5 seconds to let you read...")
+                time.sleep(5)
+        returninput = input("Please input the book code you would like to return: ")
+        if returninput in bookdata and bookavailability[returninput] == "F":
+            print("You have requested for", "'",bookdata[returninput],"' to be returned. Is this correct?")
+            returnconfirmation = input("Confirm request (y/n): ")
+            if returnconfirmation == "y":
+                print("Request successfully sent. Please check your NSW EDU email for more details.")
+            if returnconfirmation == "n":
+                print("Request halted.")
         else:
             print("Incorrect book or invalid book code. Please try again later.")
 
     elif operation == "5":
         print("\n"*2)
+        ## ASKS USER FOR EXIT CONFIRMATION
         exitconfirmation = input("Are you sure you want to exit? (y/n): ")
-    if exitconfirmation == "y":
-        print("Thank you for using Kingsgrove High School's library services, {}!".format(namedata[Username]))
-        print("Developed by Hanly Wijaya, 2025")
-        print("All rights reserved, 2025 HANLY WIJAYA ©")
-        print("\n"*2)
-        print("..........................")
-        print("......[]..........[]......")
-        print("......[]..........[]......")
-        print("......[]..........[]......")
-        print("......[]..........[]......")
-        print("..........................")
-        print("....||..............||....")
-        print("....||..............||....")
-        print("....||..............||....")
-        print("....||..............||....")
-        print("....==================....")
-        print("..........................")
-        break
+        if exitconfirmation == "y":
+            print("\n"*25)
+            print("Thank you for using Kingsgrove High School's library system,", namedata[Username])
+            print("Developed by Hanly Wijaya ©, 2025")
+            print("All rights reserved, 2025 HANLY WIJAYA ©")
+            print("\n"*5)
+            print("..........................")
+            print("......[]..........[]......")
+            print("......[]..........[]......")
+            print("......[]..........[]......")
+            print("......[]..........[]......")
+            print("..........................")
+            print("....||..............||....")
+            print("....||..............||....")
+            print("....||..............||....")
+            print("....||..............||....")
+            print("....==================....")
+            print("..........................")
+            break
+        else:
+            print("Returning to the main menu.")
+            time.sleep(2)
+    ## SENDS USER BACK TO FUNCTION MENU IF INVALID FUNCTION NUMBER IS INPUTTED.
     else:
-        continue
-else:
-    print("Invalid function number. Please try again.")
+        print("Invalid choice. Please enter a valid function number.")
+        time.sleep(2)
