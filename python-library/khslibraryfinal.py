@@ -183,7 +183,8 @@ while True:
         else:
             print("Returning to the main menu.")
             time.sleep(2)
-    ## SENDS USER BACK TO FUNCTION MENU IF INVALID FUNCTION NUMBER IS INPUTTED.
+            
+## SENDS USER BACK TO FUNCTION MENU IF INVALID FUNCTION NUMBER IS INPUTTED.
     else:
         print("Invalid choice. Please enter a valid function number.")
         time.sleep(2)
