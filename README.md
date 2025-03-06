@@ -45,6 +45,7 @@ https://www.reddit.com/r/learnpython/comments/hsvw5w/if_vs_elif/
 w3resource -
 https://www.w3resource.com/python-exercises/tkinter/python-tkinter-dialogs-and-file-handling-exercise-2.php#:~:text=Python%20Tkinter%3A%20Creating%20an%20exit%20confirmation%20dialog&text=from%20tkinter%20import%20messagebox%20%E2%80%93%20Import,to%20save%20changes%20before%20exiting.
 https://www.w3schools.com/python/python_arrays.asp
+https://www.w3schools.com/python/ref_func_enumerate.asp
 
 stackabuse -
 https://stackabuse.com/bytes/handling-yes-no-user-input-in-python/

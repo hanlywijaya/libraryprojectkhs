@@ -1,6 +1,8 @@
+# Used for counting seconds when delaying operations
 import time
 
 ## USER DATABASE
+# stores data's name, username & password
 users = {
     'sgilmore': 'Pass1',
     'bwiseman': 'Pass2',
@@ -40,6 +42,7 @@ print(".")
 print("Welcome to Kingsgrove High School's library services.")
 
 ## login
+# Login system with an attempt system
 def login():
     attempts=3
     while attempts > 0:
@@ -80,7 +83,9 @@ def login():
             print(".")
             print(".")
             print(".")
+            time.sleep(2)
             return username
+        # line below removes an attempt everytime the user fails to input a valid username or password
         attempts -= 1
         print("Incorrect username or password. Please try again. You have {} attempts left.".format(attempts))
     if attempts == 0:
@@ -92,6 +97,7 @@ username = login()
 fullname = (fullnames[username])
 
 ## FULL BOOK DATABASE
+# Stores book ids, availability and names
 books = {
     "1101": ("In Search of Lost Time", "t"),
     "1102": ("Ulysses", "t"),
@@ -131,11 +137,11 @@ while True:
         print(".")
         print(".")
         print("**LIST OF ALL BOOKS**")
+        time.sleep(2)
         for idx, (book_code, book_info) in enumerate(books.items(), start=1):
             title = book_info[0]
             print(f"{idx}. {title} (Book Code: {book_code})")
         print(f"\nThere are a total of {len(books)} books")
-        time.sleep(5)
 
     elif operation == "2":
         print("Fetching the list of available books. Please wait...")
@@ -143,17 +149,19 @@ while True:
         print(".")
         print(".")
         print("**LIST OF AVAILABLE BOOKS**")
+        time.sleep(2)
         if not available_books:
             print("No books are currently available for borrowing.")
         else:
             for idx, (book_code, book_info) in enumerate(available_books.items(), start=1):
                 print(f"{idx}. {book_info[0]} (Book Code: {book_code})")
             print(f"\nThere are a total of {len(available_books)} books available.")
-        time.sleep(5)
+        time.sleep(2)
 
     elif operation == "3":
         print("Opening available books to borrow...\n")
         print("**LIST OF AVAILABLE BOOKS TO BORROW**")
+        time.sleep(2)
         if not available_books:
             print("No books are currently available for borrowing.")
         else:
@@ -174,11 +182,11 @@ while True:
                     print("Sorry, the book is currently not available.")
                 else:
                     print("The book code does not exist. Please check the code and try again.")
-        time.sleep(5)
 
     elif operation == "4":
         print("Opening available books to return...\n")
         print("**LIST OF AVAILABLE BOOKS TO RETURN**")
+        time.sleep(2)
         if not available_books:
             print("No books are currently available for returning.")
         else:
@@ -199,7 +207,6 @@ while True:
                     print("Sorry, the book is currently not available.")
                 else:
                     print("The book code does not exist. Please check the code and try again.")
-        time.sleep(5)
 
     elif operation == "5":
         confirm_exit = input("Are you sure you want to exit? (y/n): ")
@@ -223,5 +230,6 @@ while True:
             break
         else:
             print("Returning to the main menu.")
+            time.sleep(2)
     else:
-        print("Invalid choice. Please enter a number between 1 and 4.")
+        print("Invalid choice. Please enter a valid operation number.")
