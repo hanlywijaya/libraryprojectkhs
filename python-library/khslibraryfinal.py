@@ -71,20 +71,92 @@ while attempts > 0:
         print("Welcome", namedata[Username])
         break
     else:
-        print("Invalid username or password, you have", attempts, "attempts left")
-        attempts -=1
+        if attempts > 0:
+            attempts -=1
+            print("\n"*2)
+            print("Invalid username or password, you have", attempts, "attempts left")
         if attempts ==0:
-             print("You have run out of attempts. Please try again by rerunning the program.")
-             exit()
-        
-print("1 - list all books")
-print("2 - list of available book")
-print("3 - borrow a book")
-print("4 - return a book")
-print("5 - exit")
-operation = input("Please input an operation: ")
+            print("\n"*2)
+            print("You have run out of attempts. Please try again by rerunning the program.")
+            exit()
 
-if operation == "1":
-    print("**List of all books**")
-    for bcode, book in bookdata.items():
-        print(book, "-", bcode)
+while True:
+    print("\n"*15)
+    print("Welcome to Kingsgrove High School's library system", namedata[Username])
+    print("1 - List all books")
+    print("2 - List of available books")
+    print("3 - Borrow a book")
+    print("4 - Return a book")
+    print("5 - Exit library")
+    print("\n"*2)
+    operation = input("Please input an function number: ")
+
+    if operation == "1":
+        print("**List of all books**")
+        index = 0
+        for bcode, book in bookdata.items():
+            print(index,".", book, "-", bcode)
+            index +=1
+
+    elif operation == "2":
+        print("**List of all available books**")
+        index = 0
+        for bcode, book in bookdata.items():
+            if bookavailability[bcode] == "T":
+                print(index,".", book, "-", bcode)
+                index +=1
+        print("Resting for 5 seconds before returning to function menu...")
+        time.sleep(5)
+
+    elif operation == "3":
+        print("**List of all available books**")
+        index = 0
+        for bcode, book in bookdata.items():
+            if bookavailability[bcode] == "T":
+                print(index,".", book, "-", bcode)
+                index +=1
+        borrowinput = input("Please input the book code you would like to borrow: ")
+        if borrowinput in bookdata and bookavailability[borrowinput] == "T":
+            print("You have requested for", "'",bookdata[borrowinput],"' to be borrowed.")
+        else:
+            print("Unavailable book or invalid book code. Please try again later.")
+    
+    elif operation == "4":
+        print("**List of all available books**")
+        index = 0
+        for bcode, book in bookdata.items():
+            if bookavailability[bcode] == "F":
+                print(index,".", book, "-", bcode)
+                index +=1
+        borrowinput = input("Please input the book code you would like to return: ")
+        if borrowinput in bookdata and bookavailability[borrowinput] == "F":
+            print("You have requested for", "'",bookdata[borrowinput],"' to be returned.")
+        else:
+            print("Incorrect book or invalid book code. Please try again later.")
+
+    elif operation == "5":
+        print("\n"*2)
+        exitconfirmation = input("Are you sure you want to exit? (y/n): ")
+    if exitconfirmation == "y":
+        print("Thank you for using Kingsgrove High School's library services, {}!".format(namedata[Username]))
+        print("Developed by Hanly Wijaya, 2025")
+        print("All rights reserved, 2025 HANLY WIJAYA ©")
+        print("\n"*2)
+        print("..........................")
+        print("......[]..........[]......")
+        print("......[]..........[]......")
+        print("......[]..........[]......")
+        print("......[]..........[]......")
+        print("..........................")
+        print("....||..............||....")
+        print("....||..............||....")
+        print("....||..............||....")
+        print("....||..............||....")
+        print("....==================....")
+        print("..........................")
+        break
+    else:
+        continue
+    
+else:
+    print("Invalid function number. Please try again.")

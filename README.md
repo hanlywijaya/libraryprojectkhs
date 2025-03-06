@@ -67,6 +67,11 @@ https://wiki.python.org/moin/ForLoop
 **KHS Borrow Menu**
 ![KHS Exit](khslibraryexit.jpg)
 **KHS Exit Menu**
+# How to use
+1. Run the script.
+2. Enter a valid username (e.g., "sgilmore") and the corresponding password ("Pass1"). You'll be greeted with a welcome message.
+3. Enter "1" to list all books, "2" to list available books, "3" to borrow a book, "4" to return a book, or "5" to exit.
+4. Follow the prompts to perform the selected operation.
 # DISCLAIMER :
 This is not official software to use in a deployed environment. This is a assessment task for my Software Engineering and those looking are highly encouraged to avoid using this for deployment.
 # Documentation
