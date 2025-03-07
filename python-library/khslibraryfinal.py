@@ -69,8 +69,8 @@ bookavailability = {
 print("Welcome to Kingsgrove High School's library system")
 attempts = 3
 while attempts > 0:
-    Username = input("Please input username: ")
-    Password = input("Please input password: ")
+    Username = input("Please enter your username: ")
+    Password = input("Please enter your password: ")
     if Username in userdata and userdata[Username] == Password:
         print("Welcome", namedata[Username])
         break
@@ -94,7 +94,7 @@ while True:
     print("4 - Return a book")
     print("5 - Exit library")
     print("\n"*2)
-    operation = input("Please input an function number: ")
+    operation = input("Please enter an function number: ")
 
     if operation == "1":
         print("**List of all books**")
@@ -122,7 +122,7 @@ while True:
                 index +=1
                 print("Resting for 5 seconds to let you read...")
                 time.sleep(5)
-        borrowinput = input("Please input the book code you would like to borrow: ")
+        borrowinput = input("Please enter the book code you would like to borrow: ")
         if borrowinput in bookdata and bookavailability[borrowinput] == "T":
             print("You have requested for", "'",bookdata[borrowinput],"' to be borrowed. Is this correct?")
             print("\n")
@@ -146,7 +146,7 @@ while True:
                 index +=1
                 print("Resting for 5 seconds to let you read...")
                 time.sleep(5)
-        returninput = input("Please input the book code you would like to return: ")
+        returninput = input("Please enter the book code you would like to return: ")
         if returninput in bookdata and bookavailability[returninput] == "F":
             print("You have requested for", "'",bookdata[returninput],"' to be returned. Is this correct?")
             returnconfirmation = input("Confirm request (y/n): ")
