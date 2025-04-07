@@ -138,7 +138,7 @@ while True:
             print("Unavailable book or invalid book code. Please try again later.")
     
     elif operation == "4":
-        print("**List of all available books**")
+        print("**List of all borrowed books**")
         index = 0
         for bcode, book in bookdata.items():
             if bookavailability[bcode] == "F":
