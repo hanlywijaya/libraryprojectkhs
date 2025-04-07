@@ -91,7 +91,7 @@ while True:
     print("1 - List all books")
     print("2 - List of available books")
     print("3 - Borrow a book")
-    print("4 - Return a book")
+    print("4 - Return a book") #creativity
     print("5 - Exit library")
     print("\n"*2)
     operation = input("Please enter an function number: ")
@@ -138,7 +138,7 @@ while True:
             print("Unavailable book or invalid book code. Please try again later.")
     
     elif operation == "4":
-        print("**List of all borrowed books**")
+        print("**List of all borrowed books**") #creativity
         index = 0
         for bcode, book in bookdata.items():
             if bookavailability[bcode] == "F":
