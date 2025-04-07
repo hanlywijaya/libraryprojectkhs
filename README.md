@@ -36,7 +36,7 @@ programiz -
 https://www.programiz.com/python-programming/methods/list/index
 https://www.programiz.com/python-programming/break-continue
 
-GitHub - LukeZGD - for inspiration and coding help
+GitHub - LukeZGD - for inspiration and code referencing
 https://github.com/LukeZGD/Legacy-iOS-Kit
 
 Reddit -
